@@ -29,4 +29,12 @@ Response 200:
 ```
 
 ### GET /api/products/{id}
-Mengambil satu produk. Response 404 jika tidak ditemukan.
+Response 404 (produk tidak ditemukan):
+```json
+{ "success": false, "message": "produk tidak ditemukan", "data": null }
+```
+
+Response 400 (id bukan angka):
+```json
+{ "success": false, "message": "id harus berupa angka", "data": null }
+```
